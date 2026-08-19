@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Private File Share</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="app">
+
+  <div class="mode-row" role="group" aria-label="Mode">
+    <button id="modeNearby" class="mode-btn active" data-mode="nearby" type="button">Share nearby</button>
+    <button id="modeSend" class="mode-btn" data-mode="send" type="button">Send anywhere</button>
+    <button id="modeReceive" class="mode-btn" data-mode="receive" type="button">Receive a file</button>
+  </div>
+
+  <div id="error" class="error hidden"></div>
+
+  <!-- Share nearby (same Wi-Fi or a phone scanning a QR code) -->
+  <section id="panelNearby" class="panel">
+    <p class="hint">Anything nearby on the same Wi-Fi — a phone, another computer — can open the link or scan the code. Nothing leaves this network.</p>
+
+    <div id="nearbyPicker" class="picker-row">
+      <button id="chooseFilesNearby" class="btn" type="button">Choose files…</button>
+      <button id="chooseFolderNearby" class="btn" type="button">Choose a folder…</button>
+    </div>
+    <div id="nearbySelection" class="selection hidden"></div>
+    <button id="startNearby" class="btn primary hidden" type="button">Start sharing</button>
+
+    <div id="nearbyActive" class="active-share hidden">
+      <img id="nearbyQr" class="qr" alt="QR code for the share link">
+      <div class="active-share-info">
+        <div class="share-url"><a id="nearbyUrl" href="#" target="_blank" rel="noopener"></a></div>
+        <div id="nearbyDownloads" class="downloads-count"></div>
+        <button id="stopNearby" class="link-btn" type="button">Stop sharing</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Send anywhere (croc, relayed, end-to-end encrypted) -->
+  <section id="panelSend" class="panel hidden">
+    <p class="hint">Works across the internet, not just this Wi-Fi. Give the other person this code — they enter it wherever they're receiving from.</p>
+
+    <div id="sendPicker" class="picker-row">
+      <button id="chooseFilesSend" class="btn" type="button">Choose files…</button>
+      <button id="chooseFolderSend" class="btn" type="button">Choose a folder…</button>
+    </div>
+    <div id="sendSelection" class="selection hidden"></div>
+    <button id="startSend" class="btn primary hidden" type="button">Send</button>
+
+    <div id="sendActive" class="active-share hidden">
+      <div class="code-display">
+        <div id="sendCode" class="code"></div>
+        <div class="hint">Share this code with the recipient</div>
+      </div>
+      <div id="sendProgress" class="progress hidden">
+        <div class="progress-bar"><div id="sendProgressFill" class="progress-fill"></div></div>
+        <div id="sendProgressLabel" class="progress-label"></div>
+      </div>
+      <button id="cancelSend" class="link-btn" type="button">Cancel</button>
+    </div>
+  </section>
+
+  <!-- Receive (croc) -->
+  <section id="panelReceive" class="panel hidden">
+    <p class="hint">Enter the code you were given.</p>
+
+    <div class="code-input-row">
+      <input id="receiveCode" type="text" placeholder="curly-giraffe-happy" autocomplete="off" spellcheck="false">
+      <button id="startReceive" class="btn primary" type="button">Receive</button>
+    </div>
+
+    <div id="receiveProgress" class="progress hidden">
+      <div class="progress-bar"><div id="receiveProgressFill" class="progress-fill"></div></div>
+      <div id="receiveProgressLabel" class="progress-label"></div>
+      <button id="cancelReceive" class="link-btn" type="button">Cancel</button>
+    </div>
+
+    <div id="receiveDone" class="done-actions hidden">
+      <span class="done-message">Saved to Downloads.</span>
+      <div class="done-buttons">
+        <button id="showReceiveFolder" class="btn" type="button">Show in folder</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

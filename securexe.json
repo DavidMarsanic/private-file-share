@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "id": "croc",
+      "name": "croc (engine package)",
+      "version": "v10.7.0",
+      "homepage": "https://github.com/schollz/croc",
+      "note": "Compiled directly into this binary — powers internet send/receive. Relayed through croc's own public relay, which only ever sees end-to-end-encrypted ciphertext, never file contents. Not a separate install; listed for transparency about what this app is built on."
+    },
+    {
+      "id": "go-qrcode",
+      "name": "go-qrcode",
+      "version": "v0.0.0-20200617195104-da1b6568686e",
+      "homepage": "https://github.com/skip2/go-qrcode",
+      "note": "Compiled directly into this binary — generates the QR code for the on-Wi-Fi share link. Not a separate install."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "chromium-browser",
+      "name": "Chrome or Chromium-based browser",
+      "homepage": "https://www.google.com/chrome/",
+      "note": "Any Chromium-based browser works: Google Chrome, Chromium, Brave, Microsoft Edge, or Arc. Used to render the app's own UI window, same as the rest of this family of apps.",
+      "install": {
+        "macos": "brew install --cask google-chrome"
+      }
+    }
+  ]
+}
