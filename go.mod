@@ -3,6 +3,7 @@ module github.com/DavidMarsanic/private-file-share
 go 1.25.0
 
 require (
+	github.com/DavidMarsanic/brightencode-appkit v0.0.0-20260916192535-3b0c0ec7beb8
 	github.com/schollz/croc/v10 v10.7.0
 	github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
 )

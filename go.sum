@@ -1,5 +1,7 @@
 filippo.io/edwards25519 v1.2.0 h1:crnVqOiS4jqYleHd9vaKZ+HKtHfllngJIiOpNpoJsjo=
 filippo.io/edwards25519 v1.2.0/go.mod h1:xzAOLCNug/yB62zG1bQ8uziwrIqIuxhctzJT18Q77mc=
+github.com/DavidMarsanic/brightencode-appkit v0.0.0-20260916192535-3b0c0ec7beb8 h1:DAYPY/XBUtlqKn6Y4Xk7HwCJBHbDJMGrI72Xwo9OgmE=
+github.com/DavidMarsanic/brightencode-appkit v0.0.0-20260916192535-3b0c0ec7beb8/go.mod h1:cN/0lUiP4Hl5mhkfMQPcEkEs5/BmsHA4OnReWJF3610=
 github.com/cespare/xxhash/v2 v2.3.0 h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
 github.com/cespare/xxhash/v2 v2.3.0/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/chengxilo/virtualterm v1.0.4 h1:Z6IpERbRVlfB8WkOmtbHiDbBANU7cimRIof7mk9/PwM=
